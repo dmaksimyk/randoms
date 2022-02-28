@@ -1,7 +1,7 @@
 import { middleware } from "./modules";
 import { rand, random } from "./libs";
 
-const action = {
+export = {
   rand: (min: number, max: number) => {
     const arr: number[] = [min];
     const secondMax = max || min;
@@ -20,5 +20,3 @@ const action = {
   },
   random: (num: number) => middleware([num], () => random),
 };
-
-export default action;
