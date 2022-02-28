@@ -1,6 +1,6 @@
 {
   "name": "@dmaksimyk/randoms",
-  "version": "1.3.3",
+  "version": "1.4.0",
   "description": "This package adding random functions!",
   "main": "dist/index",
   "types": "dist/index.d.ts",
