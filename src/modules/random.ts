@@ -1,8 +1,7 @@
-import crypto from "crypto";
+import { advancedRandomizer, middleware } from "../helpers";
 
-const advancedRandomizer = (nums: number[]): number => {
-  const [max] = nums;
-  return crypto.randomInt(max);
+const random = (nums: number): number => {
+  return middleware([nums], () => advancedRandomizer);
 };
 
-export default advancedRandomizer;
+export default random;

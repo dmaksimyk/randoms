@@ -1,9 +1,20 @@
-const basicRandomizer = (nums: number[]): number => {
-  const [min, max] = nums;
-  const forOneNumber: number = Math.floor(Math.random() * min);
-  const forTwoNumbers: number = Math.floor(Math.random() * (max - min + 1)) + min;
+import { basicRandomizer, middleware } from "../helpers";
 
-  return nums.length === 1 ? forOneNumber : forTwoNumbers;
+const rand = (min: number, max: number) => {
+  const arr: number[] = [min];
+  const secondMax = max || min;
+
+  if (max && max > min) {
+    arr.push(secondMax);
+  } else {
+    if (max && max <= min) {
+      arr.push(min + 1);
+    } else if (!max && secondMax <= min) {
+      arr.push(min + 1);
+    }
+  }
+
+  return middleware(arr, () => basicRandomizer);
 };
 
-export default basicRandomizer;
+export default rand;
