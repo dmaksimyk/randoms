@@ -1,4 +1,8 @@
-import { getRandomMinMaxInteger, getRandomNumInteger, middleware } from "../helpers";
+import {
+  getRandomMinMaxInteger,
+  getRandomNumInteger,
+  middleware,
+} from "../helpers";
 
 const random = (first: number, second?: number) => {
   // if only one number
@@ -8,15 +12,10 @@ const random = (first: number, second?: number) => {
   const arr: number[] = [first];
   const secondMax = second || first;
 
-  if (second && second > first) {
-    arr.push(secondMax);
-  } else {
-    if (second && second <= first) {
-      arr.push(first + 1);
-    } else if (!second && secondMax <= first) {
-      arr.push(first + 1);
-    }
-  }
+  if (!second) throw Error("missing second number.");
+  
+  if (second > first) arr.push(secondMax);
+  else arr.push(first + 1);
 
   return middleware(arr, () => getRandomMinMaxInteger);
 };
