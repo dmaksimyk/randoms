@@ -1,6 +1,6 @@
 {
   "name": "@dmaksimyk/randoms",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package adding random functions!",
   "main": "dist/index",
   "types": "dist/index.d.ts",
@@ -24,6 +24,7 @@
     "build": "rimraf dist && tsc",
     "dev": "cross-env NODE_PATH=./dist nodemon",
     "start": "node ./dist/index.js",
+    "prepublish": "rimraf dist && tsc",
     "publish": "npm publish --access public",
     "republish": "npm version patch && npm publish --access public",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
