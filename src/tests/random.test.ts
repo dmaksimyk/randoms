@@ -1,4 +1,4 @@
-import { random } from "../index";
+import random from "../index";
 
 describe("random", () => {
   it("number", () => {
