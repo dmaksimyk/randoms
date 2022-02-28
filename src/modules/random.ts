@@ -1,7 +1,7 @@
 import { advancedRandomizer, middleware } from "../helpers";
 
-const random = (nums: number): number => {
-  return middleware([nums], () => advancedRandomizer);
+const random = (num: number): number => {
+  return middleware([num], () => advancedRandomizer);
 };
 
 export default random;
