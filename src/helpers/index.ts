@@ -1,3 +1,3 @@
-export { default as basicRandomizer } from "./rand";
-export { default as advancedRandomizer } from "./random";
+export { default as getRandomMinMaxInteger } from "./getRandomMinMaxInteger";
+export { default as getRandomNumInteger } from "./getRandomNumInteger";
 export { default as middleware } from "./middleware";

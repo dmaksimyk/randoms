@@ -1,4 +1,4 @@
-import { rand, random } from "../index";
+import { random } from "../index";
 
 describe("random", () => {
   it("number", () => {
@@ -6,10 +6,6 @@ describe("random", () => {
   })
   
   it("numbers", () => {
-    expect(typeof rand(123, 1234)).toBe("number");
-  })
-
-  it("error", () => {
-    expect(typeof random(0)).toThrow();
+    expect(typeof random(123, 1234)).toBe("number");
   })
 }) 
